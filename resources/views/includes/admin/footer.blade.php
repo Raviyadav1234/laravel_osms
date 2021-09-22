@@ -49,6 +49,7 @@
         <!-- cdn for jquery data-table -->
         <script src="//cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
         
+<script type="text/javascript" src="{{asset('js/custom.js')}}"></script>
 
     <script type="text/javascript">
             $(document).ready( function () {
@@ -58,5 +59,7 @@
                 });
             });
     </script>
+
+    
     </body>
 </html>

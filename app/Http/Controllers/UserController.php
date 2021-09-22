@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Mail;
+use App\mail\EmailTesting;
 
 
 class UserController extends Controller
@@ -222,12 +223,10 @@ if($request->new_password != $request->cnf_password){
 
 public function email(){
 
-    Mail::send('user.mail',['name'=>'ravi','data'=>'hello ravi'], function($message){
-        $message->from('raviyadav2017sln@gmail.com');
-        $message->to('raviyadav2017sln@gmail.com', 'elbiheiry')->subject('TODOParrot Feedback');
-    });
-
-        return redirect(route('email'));
+   $data =['title'=>"Ravi yadav",'body'=>"Hello ravi"];
+   
+   Mail::to("raviyadav2017sln@gmail.com")->send(new EmailTesting($data));
+   return "email sent";
 
 
 }

@@ -59,8 +59,10 @@ define('page', 'Assign-Request');
                            <div class="col-xl-6">
 
                             @if(session()->has('success'))
-                            <div class="alert alert-success" id="success">
+                            <div class="alert alert-success" id="flash_msg">
+
                             {{session('success')}}
+                            <?php hide_msg('flash_msg'); ?>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -278,5 +280,12 @@ define('page', 'Assign-Request');
                 </div> <!-- content -->
                   </div>
                         <!-- content-page -->
+
+ <!-- <script type="text/javascript">
+            var flash = document.getElementById('flash_msg');
+            setTimeout(function(){
+                flash.style='display:none';
+            },5000);
+    </script> -->
 
 @include('includes.admin.footer')

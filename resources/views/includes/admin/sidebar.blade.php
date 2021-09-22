@@ -22,7 +22,7 @@
                                 </a>
                             </li>
                               <li>
-                                <a href="">
+                                <a href="{{ route('assign_work_view') }}" class="<?php if(page=='Assign Work')echo'active';?>">
                                     <i class="mdi mdi-view-dashboard"></i>
                                     <span> Work Order</span>
                                 </a>
@@ -34,23 +34,18 @@
                                 </a>
                             </li>
                               <li>
-                                <a href="">
+                                <a href="{{ route('assets_view') }}" class="<?php if(page=='Assets') echo"active";?>">
                                     <i class="mdi mdi-view-dashboard"></i>
                                     <span> Assets</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="{{ route('technician_view') }}" class="<?php if(page=='Technician') echo'active';?>">
                                     <i class="mdi mdi-view-dashboard"></i>
                                     <span> Technician</span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="">
-                                    <i class="mdi mdi-view-dashboard"></i>
-                                    <span> Requester</span>
-                                </a>
-                            </li>
+                           
                             <li>
                                 <a href="">
                                     <i class="mdi mdi-view-dashboard"></i>

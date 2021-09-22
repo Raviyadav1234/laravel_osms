@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\SubmitRequest;
 use App\Models\AssignWork;
+use App\Models\Technician;
 
 class HomeController extends Controller
 {
@@ -38,8 +39,12 @@ class HomeController extends Controller
         $total_requester = SubmitRequest::select('id')->count();
         $requester_data = SubmitRequest::all();
 
+        $total_technician = Technician::select('id')->count();
+        $technician_data = SubmitRequest::all();
+
+
         return view('admin.dashboard',compact([
-            'total_requester','requester_data','total_assignwork','assignwork_data'
+            'total_requester','requester_data','total_assignwork','assignwork_data','total_technician','technician_data'
         ])); 
     }
     
